@@ -1,0 +1,4 @@
+repository "U_Carondelet@ImanTransmedia@cloud"
+  path "/"
+    br "/main"
+    co "/main"
