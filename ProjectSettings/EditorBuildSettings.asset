@@ -6,8 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Carondelet/Scenes/menu_de_inicio_scene.unity
+    guid: 1abf2570fceefd441999d5ce92013808
+  - enabled: 1
+    path: Assets/_Carondelet/Scenes/prueba _transiciones_scene.unity
+    guid: 1f006b6cc3849bf40a5c40f33d07e0b2
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 4c5da1f463cacd842b521601a0a6f8a2, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: ca7b20191c031894991ef0561dd21a8c, type: 2}
   m_UseUCBPForAssetBundles: 0
