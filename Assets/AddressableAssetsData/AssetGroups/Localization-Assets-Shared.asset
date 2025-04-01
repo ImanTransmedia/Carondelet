@@ -14,8 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Localization-Assets-Shared
   m_GUID: 9306fff6692818641b2d120b8b5bd430
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0c1a7f72f933d7443a50e296b3d22956
+    m_Address: Assets/_Carondelet/Localization/Tables/Table1 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 7fcde95bc98c7fd4ca5f7ff6e63587a2, type: 2}
   m_SchemaSet:
-    m_Schemas: []
+    m_Schemas:
+    - {fileID: 11400000, guid: efec6167536f1884e84cd5305d6f92f6, type: 2}
+    - {fileID: 11400000, guid: c9fbb079fd198154f83e3546ee7b3334, type: 2}

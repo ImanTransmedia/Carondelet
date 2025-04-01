@@ -3,17 +3,28 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class UIManager : MonoBehaviour
+
 {
+    [Header("Fade Settings")]
+    public CanvasGroup fadeCanva; 
+    public float fadeDuration = 0.4f;
+
     // Script centralizado para todas las funciones de UI
     void Start()
     {
-        // Desactivar cualquier elemento de UI que no deba estar activo al iniciar el programa
+       FadeOut();
     }
 
-    // Función reutilizable para cargar cualquier escena
+    // Función reutilizable para cargar cualquier escena de forma asíncrona
     public void StartAsyncLoadScene(string sceneName)
     {
-        StartCoroutine(LoadSceneAsync(sceneName));
+        StartCoroutine(LoadSceneWithFade(sceneName));
+    }
+
+    private IEnumerator LoadSceneWithFade(string sceneName)
+    {
+        yield return FadeInCorutine(); // Esperar a que termine FadeIn completamente
+        yield return LoadSceneAsync(sceneName); //Empezar a cargar la escena
     }
 
     private IEnumerator LoadSceneAsync(string sceneName)
@@ -50,4 +61,44 @@ public class UIManager : MonoBehaviour
     {
         TogglePanel(panel, false);
     }
+
+  
+    public IEnumerator FadeInCorutine()
+    {
+        fadeCanva.gameObject.SetActive(true);
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            fadeCanva.alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        fadeCanva.alpha = 1f;
+    }
+
+
+    public IEnumerator FadeOutCorutine()
+    {
+        fadeCanva.gameObject.SetActive(true);
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            fadeCanva.alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        fadeCanva.alpha = 0f;
+        fadeCanva.gameObject.SetActive(false);
+    }
+
+      // Función de Fade In
+    public void FadeIn(){
+         StartCoroutine(FadeInCorutine());
+    }
+
+    // Función de Fade Out
+     public void FadeOut(){
+         StartCoroutine(FadeOutCorutine());
+    }
+
 }
