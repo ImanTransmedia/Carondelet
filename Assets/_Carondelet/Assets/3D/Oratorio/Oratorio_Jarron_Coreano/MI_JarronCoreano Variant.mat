@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_Cristo Variant
+  m_Name: MI_JarronCoreano Variant
   m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
   m_Parent: {fileID: 2100000, guid: 54f9f286553394a458eca5cbfb261b46, type: 2}
   m_ModifiedSerializedProperties: 2
@@ -26,15 +26,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 7717aeec83cb22542bb05a79961d279b, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb2a8f5a6e959fe43add3582e565adde, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a3c71e4b3f2e75e46a3b070d86ee449a, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9564f6fbf977f9041b0bf8f09a6ce424, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _R_M_AO:
-        m_Texture: {fileID: 2800000, guid: 2d88ccef63d6b0349a0c19e20b0d59a2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3f4219e033ccfa7439e94778ac8b3aa8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
