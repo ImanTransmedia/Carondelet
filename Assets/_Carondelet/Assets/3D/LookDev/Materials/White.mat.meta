@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 93ec604941461b84cb12374565a4d468
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 225372
+  packageName: Shader Calibration Scene - Remastered
+  packageVersion: 1.0
+  assetPath: Assets/Nebula Animations/Materials/White.mat
+  uploadId: 507794

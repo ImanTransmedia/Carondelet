@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7af3f7794cb32804caa2e766f0c4177f
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 225372
+  packageName: Shader Calibration Scene - Remastered
+  packageVersion: 1.0
+  assetPath: Assets/Nebula Animations/Shaders/Showcase Room.shader
+  uploadId: 507794
