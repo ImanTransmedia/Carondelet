@@ -1,64 +1,118 @@
 using UnityEngine;
+using System.Collections;
 
 public class DiegeticObjectInspector : MonoBehaviour
 {
-    //Este script sirve para rotar objetos en 3d con el mouse o con input touch
-     [Header("Rotation Settings")]
+    //Este script sirve unicamente para la interaccion con el diorama
+    [Header("Camera configuration")]
+    public Transform cameraTransform;
+    public float moveSpeed = 5f;
     public float rotationSpeed = 5f;
-    public float minXRotation = -45f;
-    public float maxXRotation = 45f;
-    public float minYRotation = -45f;
-    public float maxYRotation = 45f;
-    public float smoothX = 5f;
-    public float smoothY = 5f;
+    public float zoomDistance = 2f;
 
-    private bool isDragging = false;
-    private Vector2 currentRotation;
-    private Vector2 targetRotation;
-    private Vector2 lastMousePosition;
+    [Header("UI Panels")]
+    public CanvasGroup panelAreaExterior; // Panel por defecto
+    public CanvasGroup panelAreaSeleccionada; // Panel cuando se inspecciona un objeto
+    public float fadeDuration = 0.4f;
+
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+    public bool isReturning = false;
 
     void Start()
     {
-        targetRotation = transform.eulerAngles;
+        if (cameraTransform == null) return;
+        initialPosition = cameraTransform.position;
+        initialRotation = cameraTransform.rotation;
     }
 
-    void Update()
+    // Mueve la cámara para inspeccionar un objeto
+    public void InspectObject(Transform target)
     {
-        if (isDragging)
+        if (isReturning || cameraTransform == null) return;
+        StopAllCoroutines();
+        StartCoroutine(MoveToTarget(target));
+        StartCoroutine(SwitchPanelsWithFade(panelAreaExterior, panelAreaSeleccionada));
+    }
+
+    // Restablece la cámara a su posición inicial
+    public void ResetCamera()
+    {
+        if (cameraTransform == null) return;
+        StopAllCoroutines();
+        StartCoroutine(ReturnToStart());
+        StartCoroutine(SwitchPanelsWithFade(panelAreaSeleccionada, panelAreaExterior));
+    }
+
+    private IEnumerator MoveToTarget(Transform target)
+    {
+        if (cameraTransform == null) yield break;
+
+        Vector3 targetPosition = target.position - target.forward * zoomDistance;
+        Quaternion targetRotation = Quaternion.LookRotation(target.position - targetPosition);
+
+        while (Vector3.Distance(cameraTransform.position, targetPosition) > 0.01f)
         {
-            Vector2 mouseDelta = (Vector2)Input.mousePosition - lastMousePosition;
-            
-            // Calculamos la nueva rotación basada en el movimiento del mouse
-            targetRotation.x -= mouseDelta.y * rotationSpeed * Time.deltaTime;
-            targetRotation.y += mouseDelta.x * rotationSpeed * Time.deltaTime;
-
-            // Limitar la rotación
-            targetRotation.x = Mathf.Clamp(targetRotation.x, minXRotation, maxXRotation);
-            targetRotation.y = Mathf.Clamp(targetRotation.y, minYRotation, maxYRotation);
-
-            // Suavizar la rotación
-            currentRotation.x = Mathf.Lerp(currentRotation.x, targetRotation.x, smoothX * Time.deltaTime);
-            currentRotation.y = Mathf.Lerp(currentRotation.y, targetRotation.y, smoothY * Time.deltaTime);
-
-            // Aplicar la rotación al objeto
-            transform.eulerAngles = new Vector3(currentRotation.x, currentRotation.y, transform.eulerAngles.z);
-
-            // Actualizar la posición del mouse
-            lastMousePosition = Input.mousePosition;
+            cameraTransform.position = Vector3.Lerp(cameraTransform.position, targetPosition, moveSpeed * Time.deltaTime);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            yield return null;
         }
+
+        cameraTransform.position = targetPosition;
+        cameraTransform.rotation = targetRotation;
     }
 
-    void OnMouseDown()
+    private IEnumerator ReturnToStart()
     {
-        // Imprime el nombre del objeto 3D cuando se hace clic sobre él
-        Debug.Log("Objeto 3D seleccionado: " + gameObject.name);
+        if (cameraTransform == null) yield break;
 
-        isDragging = true;
-        lastMousePosition = Input.mousePosition; // Guardar la posición inicial del mouse
+        isReturning = true;
+
+        while (Vector3.Distance(cameraTransform.position, initialPosition) > 0.01f)
+        {
+            cameraTransform.position = Vector3.Lerp(cameraTransform.position, initialPosition, moveSpeed * Time.deltaTime);
+            cameraTransform.rotation = Quaternion.Slerp(cameraTransform.rotation, initialRotation, rotationSpeed * Time.deltaTime);
+            yield return null;
+        }
+
+        cameraTransform.position = initialPosition;
+        cameraTransform.rotation = initialRotation;
+        isReturning = false;
     }
 
-    void OnMouseUp()
+    // Corutina para alternar entre los paneles con Fade
+    private IEnumerator SwitchPanelsWithFade(CanvasGroup fadeOutPanel, CanvasGroup fadeInPanel)
     {
-        isDragging = false;
+        yield return StartCoroutine(FadeOut(fadeOutPanel));
+        fadeOutPanel.gameObject.SetActive(false);
+
+        fadeInPanel.gameObject.SetActive(true);
+        yield return StartCoroutine(FadeIn(fadeInPanel));
+    }
+
+    // Fade In para un CanvasGroup
+    private IEnumerator FadeIn(CanvasGroup canvasGroup)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        canvasGroup.alpha = 1f;
+    }
+
+    // Fade Out para un CanvasGroup
+    private IEnumerator FadeOut(CanvasGroup canvasGroup)
+    {
+        float elapsedTime = 0f;
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            yield return null;
+        }
+        canvasGroup.alpha = 0f;
     }
 }

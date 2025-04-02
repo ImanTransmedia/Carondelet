@@ -1,21 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
 
 public class UIManager : MonoBehaviour
-
+// Script centralizado para todas las funciones de UI
 {
+    [Header("Script References")]
+    public AccessibilityManager accessibilityManager;
+    
+    [Header("Mobile device status")]
+    public bool isMobile;
+
+    [Header("Desktop UI Elements")]
+    public List<GameObject> desktopUIObjects;
+
+    [Header("Mobile UI Elements")]
+    public List<GameObject> mobileUIObjects;
+
+   
+
     [Header("Fade Settings")]
-    public CanvasGroup fadeCanva; 
+    public CanvasGroup fadeCanva;
     public float fadeDuration = 0.4f;
 
-    // Script centralizado para todas las funciones de UI
     void Start()
     {
-       FadeOut();
+        if (accessibilityManager == null)
+        {
+            accessibilityManager = GetComponent<AccessibilityManager>();
+        }
+        FadeOut();
+        isMobile = DetectMobileWebGL();
+
+        if (isMobile)
+        {
+            ShowMobileUI();
+            accessibilityManager.enabled = false;
+        }
+        else
+        {
+            ShowDesktopUI();
+            accessibilityManager.enabled = true;
+        }
     }
 
-    // Función reutilizable para cargar cualquier escena de forma asíncrona
+    bool DetectMobileWebGL()
+    {
+        return Application.isMobilePlatform;
+    }
+
+    // Función  para cargar  escena de forma asíncrona
     public void StartAsyncLoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneWithFade(sceneName));
@@ -62,7 +97,6 @@ public class UIManager : MonoBehaviour
         TogglePanel(panel, false);
     }
 
-  
     public IEnumerator FadeInCorutine()
     {
         fadeCanva.gameObject.SetActive(true);
@@ -75,7 +109,6 @@ public class UIManager : MonoBehaviour
         }
         fadeCanva.alpha = 1f;
     }
-
 
     public IEnumerator FadeOutCorutine()
     {
@@ -91,14 +124,38 @@ public class UIManager : MonoBehaviour
         fadeCanva.gameObject.SetActive(false);
     }
 
-      // Función de Fade In
-    public void FadeIn(){
-         StartCoroutine(FadeInCorutine());
+    // Función de Fade In
+    public void FadeIn()
+    {
+        StartCoroutine(FadeInCorutine());
     }
 
     // Función de Fade Out
-     public void FadeOut(){
-         StartCoroutine(FadeOutCorutine());
+    public void FadeOut()
+    {
+        StartCoroutine(FadeOutCorutine());
     }
 
+    //Funcion mostrar Ui solo de mobile
+    void ShowMobileUI()
+    {
+        SetActiveObjects(mobileUIObjects, true);
+        SetActiveObjects(desktopUIObjects, false);
+    }
+
+    //Funcion mostrar Ui solo de desktop
+    void ShowDesktopUI()
+    {
+        SetActiveObjects(mobileUIObjects, false);
+        SetActiveObjects(desktopUIObjects, true);
+    }
+
+    void SetActiveObjects(List<GameObject> objects, bool state)
+    {
+        foreach (GameObject obj in objects)
+        {
+            if (obj != null)
+                obj.SetActive(state);
+        }
+    }
 }
