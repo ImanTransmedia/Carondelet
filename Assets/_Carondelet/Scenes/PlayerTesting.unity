@@ -1694,6 +1694,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FullBlueprint
       objectReference: {fileID: 0}
+    - target: {fileID: 3699642922363984691, guid: 2d101303de7223145809823a99a5546c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3833219322899040097, guid: 2d101303de7223145809823a99a5546c, type: 3}
       propertyPath: m_Mesh
       value: 
