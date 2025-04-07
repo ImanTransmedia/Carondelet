@@ -3127,10 +3127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b127621adefdf9d4c95e5f2605041da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  accessibilityManager: {fileID: 1373845276}
-  isMobile: 1
-  desktopUIObjects:
-  - {fileID: 1060375900}
+  accessibilityManager: {fileID: 0}
+  isMobile: 0
+  desktopUIObjects: []
   mobileUIObjects: []
   fadeCanva: {fileID: 1562721393}
   fadeDuration: 0.55
@@ -3163,13 +3162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a796988b40f680145b3d8dd6de101746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTransform: {fileID: 1951900938}
+  cameraTransform: {fileID: 0}
   moveSpeed: 5
   rotationSpeed: 5
   zoomDistance: 2
-  panelAreaExterior: {fileID: 1852330034}
-  panelAreaSeleccionada: {fileID: 1010145558}
-  fadeDuration: 0.2
+  panelAreaExterior: {fileID: 0}
+  panelAreaSeleccionada: {fileID: 0}
+  fadeDuration: 0.4
   isReturning: 0
 --- !u!1 &1432425711
 GameObject:
