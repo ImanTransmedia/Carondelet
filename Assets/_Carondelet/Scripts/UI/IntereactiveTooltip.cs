@@ -53,6 +53,7 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerClick(PointerEventData eventData)
     {
         SetPanelVisibility(true);
+
     }
 
     private string GetTextFromContenidoChild()

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using Cinemachine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +7,7 @@ public class FirstPersonMovement : MonoBehaviour
 {
     [Header("Valores de control")]
     InputSystem_Actions inputActions;
+
     Vector2 moveInput;
     Vector2 lookInput;
 
@@ -43,16 +44,22 @@ public class FirstPersonMovement : MonoBehaviour
         inputActions.Player.Move.canceled += OnMove;
         inputActions.Player.Look.performed += OnLook;
         inputActions.Player.Look.canceled += OnLook;
+        //inputActions.Player.Interact.started += OnInteractPerformed;
     }
 
     private void OnDisable()
     {
-        inputActions.Player.Disable();
         inputActions.Player.Move.performed -= OnMove;
         inputActions.Player.Move.canceled -= OnMove;
         inputActions.Player.Look.performed -= OnLook;
         inputActions.Player.Look.canceled -= OnLook;
+        //inputActions.Player.Interact.started -= OnInteractPerformed;
+        inputActions.Player.Disable();
     }
+    //private void OnInteractPerformed(InputAction.CallbackContext context)
+    //{
+    //    Debug.Log("Mandando Señal De Interaccion");
+    //}
 
     private void OnMove(InputAction.CallbackContext context)
     {
@@ -63,6 +70,8 @@ public class FirstPersonMovement : MonoBehaviour
     {
         lookInput = context.ReadValue<Vector2>();
     }
+
+
 
     void Update()
     {
