@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
+
     [Header("Script References")]
     public AccessibilityManager accessibilityManager;
     
@@ -20,6 +21,7 @@ public class UIManager : MonoBehaviour
     [Header("Fade Settings")]
     public CanvasGroup fadeCanva;
     public float fadeDuration = 0.4f;
+
 
     void Start()
     {
@@ -41,10 +43,19 @@ public class UIManager : MonoBehaviour
             accessibilityManager.enabled = true;
         }
     }
+    
 
     bool DetectMobileWebGL()
     {
         return Application.isMobilePlatform;
+    }
+
+      private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+      FadeOut();
+       Debug.LogWarning(
+                "Se ejecuta funcion onSceneLoaded"
+            );
     }
 
     public void StartAsyncLoadScene(string sceneName)

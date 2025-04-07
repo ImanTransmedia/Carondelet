@@ -17,12 +17,14 @@ public class AccessibilityManager : MonoBehaviour
     public List<Button> buttons;
     public List<KeyCode> keyAssignments;
 
+ 
+
     void Start()
     {
         UpdateButtonList();
         if (enableAlternativeControls)
             AssignKeyBindings();
-            SetControlSettings();
+        SetControlSettings();
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -64,9 +66,7 @@ public class AccessibilityManager : MonoBehaviour
 
         if (buttons.Count > keyAssignments.Count)
         {
-            Debug.LogWarning(
-                "Hay mas botones que teclas asignadas"
-            );
+            Debug.LogWarning("Hay mas botones que teclas asignadas");
         }
 
         Invoke(nameof(ExecuteUpdateButtonListOnceMore), 0.5f);
@@ -74,7 +74,7 @@ public class AccessibilityManager : MonoBehaviour
 
     private void ExecuteUpdateButtonListOnceMore()
     {
-        UpdateButtonList(); 
+        UpdateButtonList();
     }
 
     private void SetControlSettings()
@@ -254,6 +254,7 @@ public class AccessibilityManager : MonoBehaviour
 
     public void RefreshAccessibilitySettings()
     {
+        
         UpdateButtonList();
         AssignKeyBindings();
         ToggleKeyLabels(enableAlternativeControls);
@@ -266,4 +267,5 @@ public class AccessibilityManager : MonoBehaviour
         RefreshAccessibilitySettings();
         ToggleKeyLabels(enableAlternativeControls);
     }
+
 }

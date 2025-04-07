@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: Covachas
     m_Metadata:
       m_Items: []
+  - m_Id: 703430156299
+    m_Localized: Presiona "E" para saber mas
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
