@@ -78,6 +78,10 @@ MonoBehaviour:
     m_Localized: "Alv\xE9oles vo\xFBt\xE9es"
     m_Metadata:
       m_Items: []
+  - m_Id: 703430156299
+    m_Localized: Appuie sur "E" pour en savoir plus
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

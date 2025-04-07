@@ -5,6 +5,7 @@ public class ItemDisplay : MonoBehaviour
 {
     [Header("Configuración del Objeto")]
     [SerializeField] private string itemName = "Objeto";
+     [SerializeField] private string itemSubTitle = "sub titulo";
     [TextArea] [SerializeField] private string itemDescription = "Descripción del objeto...";
     [SerializeField] private GameObject item3DPrefab; // Prefab del modelo 3D
 
@@ -30,7 +31,7 @@ public class ItemDisplay : MonoBehaviour
     private void ShowItemUI()
     {
         // Notifica al UI Manager
-        UIIngameManager.Instance.ShowItemPanel(itemName, itemDescription);
+        UIIngameManager.Instance.ShowItemPanel(itemName, itemSubTitle, itemDescription);
 
         // Crea el modelo 3D en la UI
         if (item3DPrefab != null)

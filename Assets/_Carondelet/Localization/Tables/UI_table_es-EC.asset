@@ -79,23 +79,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 703430156299
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 703430156300
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 703430156301
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 703430156302
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 703430156303
-    m_Localized: 
+    m_Localized: '"E" klikchi kaspaka yachaykunata rikuy'
     m_Metadata:
       m_Items: []
   references:
