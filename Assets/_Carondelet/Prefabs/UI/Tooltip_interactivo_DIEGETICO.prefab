@@ -444,7 +444,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4648883858324551645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,7 +488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panelCanvasGroup: {fileID: 3166726091592014628}
+  targetText: {fileID: 0}
   fadeDuration: 0.2
+  contenidoTransform: {fileID: 0}
   OnHoverEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -498,6 +500,7 @@ MonoBehaviour:
   OnClick:
     m_PersistentCalls:
       m_Calls: []
+  sceneName: 
 --- !u!1 &6390209994523071219
 GameObject:
   m_ObjectHideFlags: 0
