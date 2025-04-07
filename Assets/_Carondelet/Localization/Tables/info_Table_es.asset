@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: info_Table_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: e6909cd5edeaea74aab924612974dffc, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 300936355840
+    m_Localized: Titulo objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301066379264
+    m_Localized: Sub titulo objeto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301066379265
+    m_Localized: '"On the other hand, we denounce with righteous indignation and
+      dislike men who are so beguiled and demoralized by the charms of pleasure of
+      the moment, so blinded by desire, that they cannot foresee the pain and trouble
+      that are bound to ensue; and equal blame belongs to those who fail in their
+      duty through weakness of will, which is the same as saying through shrinking
+      from toil and pain. These cases are perfectly simple and easy to distinguish.
+      In a free hour, when our power of choice is untrammelled and when nothing prevents
+      our being able to do what we like best, every pleasure is to be welcomed and
+      every pain avoided. But in certain circumstances and owing to the claims of
+      duty or the obligations of business it will frequently occur that pleasures
+      have to be repudiated and annoyances accepted. The wise man therefore always
+      holds in these matters to this principle of selection: he rejects pleasures
+      to secure other greater pleasures, or else he endures pains to avoid worse
+      pains."'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301066379266
+    m_Localized: Titulo objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573568
+    m_Localized: Sub titulo objeto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573569
+    m_Localized: Info objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573570
+    m_Localized: Titulo objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573571
+    m_Localized: Sub titulo objeto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573572
+    m_Localized: Info objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573573
+    m_Localized: Titulo objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573574
+    m_Localized: Sub titulo objeto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573575
+    m_Localized: Info objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573576
+    m_Localized: Titulo objeto 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573577
+    m_Localized: Sub titulo objeto1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 301070573578
+    m_Localized: Info objeto 1
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
