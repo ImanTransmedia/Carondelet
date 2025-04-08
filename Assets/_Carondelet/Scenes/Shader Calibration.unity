@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 49cf0b85b58a6394194e24febe14f40d, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 68eb40bc17a00334ab522ecfc66d88f6, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -192,6 +192,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColorCheckerCard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2ba6eac82de0ff45b36d8489dc0e86e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -208,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 414b7da4757ec644f99c083c95b9434d, type: 3}
       propertyPath: m_Name
       value: CalibrationScaleRGB
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 414b7da4757ec644f99c083c95b9434d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 414b7da4757ec644f99c083c95b9434d, type: 3}
       propertyPath: m_RootOrder
@@ -287,7 +295,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &244752246
 SphereCollider:
@@ -400,7 +408,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &406225357
 SphereCollider:
@@ -617,7 +625,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &711190857
 SphereCollider:
@@ -965,6 +973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColorCheckerCard
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2ba6eac82de0ff45b36d8489dc0e86e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -992,7 +1004,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &1488872880
 SphereCollider:
@@ -1165,7 +1177,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &1747384654
 SphereCollider:
@@ -1394,7 +1406,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!135 &1803687530
 SphereCollider:
@@ -1552,6 +1564,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b0cafd57bb072534789d77d7538d2214, type: 3}
       propertyPath: m_Name
       value: Oratorio_JarronCoreano_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b0cafd57bb072534789d77d7538d2214, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
