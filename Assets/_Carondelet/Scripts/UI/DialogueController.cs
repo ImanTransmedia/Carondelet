@@ -1,59 +1,118 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Localization;
+using System.Collections;
+using System.Collections.Generic;
 
 public class DialogueController : MonoBehaviour
 {
     public TextMeshProUGUI textComponent;
+    public GameObject dialoguePanel;
     public float textSpeed = 0.05f;
-    public float timeBetweenLines = 1f;
+    public float waitBetweenSegments = 1f;
+    public int linesPerSegment = 3;
 
-    private List<LocalizedString> currentLines;
-    private int index;
+    public List<LocalizedDialogue> dialogueList;
 
-    public void ShowDialogue(List<LocalizedString> newLines)
+    private List<string> currentDialogueLines;
+    private int currentLineIndex;
+    private bool isDialogueActive = false;
+
+    void Start()
     {
-        gameObject.SetActive(true);
-        currentLines = newLines;
-        index = 0;
-        textComponent.text = "";
-        StopAllCoroutines();
-        StartCoroutine(TypeLine());
+        textComponent.text = string.Empty;
+        dialoguePanel.SetActive(false);
     }
 
-    IEnumerator TypeLine()
+    public void ShowDialogue(int index)
     {
-        var localizedString = currentLines[index];
-        string line = "";
+        if (index >= 0 && index < dialogueList.Count)
+        {
+            StopAllCoroutines();
+            textComponent.text = string.Empty;
 
-        var handle = localizedString.GetLocalizedStringAsync();
-        yield return handle;
-        line = handle.Result;
+            LocalizedString localizedString = dialogueList[index].localizedString;
+            string localizedText = localizedString.GetLocalizedString();
 
-        textComponent.text = "";
+            currentDialogueLines = SplitTextIntoLines(localizedText);
+            currentLineIndex = 0;
 
+            if (isDialogueActive)
+            {
+                StopCoroutine("DisplaySegments");
+            }
+
+            StartDialogue();
+        }
+    }
+
+    private void StartDialogue()
+    {
+        isDialogueActive = true;
+        dialoguePanel.SetActive(true);
+        StartCoroutine(DisplaySegments());
+    }
+
+    IEnumerator DisplaySegments()
+    {
+        while (currentLineIndex < currentDialogueLines.Count)
+        {
+            textComponent.text = "";
+
+            int linesThisSegment = Mathf.Min(linesPerSegment, currentDialogueLines.Count - currentLineIndex);
+
+            for (int i = 0; i < linesThisSegment; i++)
+            {
+                yield return StartCoroutine(TypeLine(currentDialogueLines[currentLineIndex]));
+                textComponent.text += "\n";
+                currentLineIndex++;
+            }
+
+            yield return new WaitForSeconds(waitBetweenSegments);
+        }
+
+        EndDialogue();
+    }
+
+    IEnumerator TypeLine(string line)
+    {
         foreach (char c in line)
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
         }
-
-        yield return new WaitForSeconds(timeBetweenLines);
-        NextLine();
     }
 
-    void NextLine()
+    private void EndDialogue()
     {
-        if (index < currentLines.Count - 1)
+        dialoguePanel.SetActive(false);
+        isDialogueActive = false;
+    }
+
+    private List<string> SplitTextIntoLines(string text)
+    {
+        List<string> lines = new List<string>();
+        string[] words = text.Split(' ');
+
+        string currentLine = "";
+        foreach (var word in words)
         {
-            index++;
-            StartCoroutine(TypeLine());
+            if ((currentLine + " " + word).Length > 50)
+            {
+                lines.Add(currentLine.Trim());
+                currentLine = word;
+            }
+            else
+            {
+                currentLine += " " + word;
+            }
         }
-        else
+
+        if (!string.IsNullOrEmpty(currentLine))
         {
-            gameObject.SetActive(false);
+            lines.Add(currentLine.Trim());
         }
+
+        return lines;
     }
 }
