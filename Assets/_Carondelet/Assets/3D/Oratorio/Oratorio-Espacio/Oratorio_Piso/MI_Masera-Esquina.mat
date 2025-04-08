@@ -39,8 +39,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 1
-    - _Glossiness: 0.57
+    - _Blend: 0.248
+    - _Glossiness: 0.222
     - _Metallic: 0.29
     - _MixRoughness: 1
     - _NormalStrenght: 0.516

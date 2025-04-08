@@ -39,7 +39,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Blend: 0.5
+    - _Glossiness: 0.378
     - _Metallic: 0
+    - _MixRoughness: 1
     - _UseAoMap: 1
     - _UseColorMap: 1
     - _UseMetallicMap: 1

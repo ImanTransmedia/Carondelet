@@ -1,5 +1,111 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9089792483048603632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbabd8e2cb2e4f8a930752453adf79a, type: 3}
+  m_Name: Beautify
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  shader: {fileID: 4800000, guid: 55d70ca4ea7504a38b66170bbe587b2f, type: 3}
+  renderPassEvent: 500
+  ignorePostProcessingOption: 0
+  clearXRColorBuffer: 0
+  cameraLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stripBeautifyTonemappingACES: 0
+  stripBeautifyTonemappingACESFitted: 0
+  stripBeautifyTonemappingAGX: 0
+  stripBeautifySharpen: 0
+  stripBeautifyDithering: 0
+  stripBeautifyEdgeAA: 0
+  stripBeautifyLUT: 0
+  stripBeautifyLUT3D: 1
+  stripBeautifyColorTweaks: 0
+  stripBeautifyBloom: 0
+  stripBeautifyLensDirt: 0
+  stripBeautifyChromaticAberration: 0
+  stripBeautifyDoF: 0
+  stripBeautifyDoFTransparentSupport: 0
+  stripBeautifyEyeAdaptation: 0
+  stripBeautifyPurkinje: 1
+  stripBeautifyVignetting: 0
+  stripBeautifyOutline: 1
+  stripBeautifyNightVision: 1
+  stripBeautifyThermalVision: 1
+  stripBeautifyFrame: 1
+  stripUnityFilmGrain: 0
+  stripUnityDithering: 0
+  stripUnityTonemapping: 0
+  stripUnityBloom: 0
+  stripUnityChromaticAberration: 0
+  stripUnityDistortion: 0
+  stripUnityDebugVariants: 0
+--- !u!114 &-7982644154694490192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf716a1be50b448e7b1d1968ab734946, type: 3}
+  m_Name: ShinySSRR
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  renderPassEvent: 500
+  useDeferred: 1
+  enableScreenSpaceNormalsPass: 0
+  customSmoothnessMetallicPass: 0
+  ignorePostProcessingOption: 1
+  cameraLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  ignoreReflectionProbes: 1
+--- !u!114 &-5693755837304369792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88bd13fabf96a4cc1aaf221e40805c5c, type: 3}
+  m_Name: RadiantRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  renderingPath: 1
+  ignorePostProcessingOption: 1
+  ignoreOverlayCameras: 1
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &-3437666204686942947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 163d34cee9b7a428d9899ab92abd7e0d, type: 3}
+  m_Name: UmbraRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_Shader: {fileID: 0}
+  camerasLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &-1991264688802537141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41,7 +147,11 @@ MonoBehaviour:
   m_RendererFeatures:
   - {fileID: 7833122117494664109}
   - {fileID: -1991264688802537141}
-  m_RendererFeatureMap: ad6b866f10d7b46c4b6125d2509b5de4
+  - {fileID: -9089792483048603632}
+  - {fileID: -5693755837304369792}
+  - {fileID: -3437666204686942947}
+  - {fileID: -7982644154694490192}
+  m_RendererFeatureMap: ad6b866f10d7b46c4b6125d2509b5de41040df7de591da81808daa973bb7fbb01dfd44e5ccf44ad0b02716676ff33791
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -60,7 +170,7 @@ MonoBehaviour:
     failOperation: 0
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
-  m_RenderingMode: 2
+  m_RenderingMode: 1
   m_DepthPrimingMode: 0
   m_CopyDepthMode: 0
   m_DepthAttachmentFormat: 0
