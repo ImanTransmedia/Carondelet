@@ -13996,7 +13996,8 @@ MonoBehaviour:
   isMobile: 1
   desktopUIObjects:
   - {fileID: 1420972360}
-  mobileUIObjects: []
+  mobileUIObjects:
+  - {fileID: 1203014841333661539}
   fadeCanva: {fileID: 1366955200}
   fadeDuration: 0.55
 --- !u!4 &1793938915
@@ -17233,6 +17234,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47bc5d9974efc2e4a8835be70a9bd574, type: 3}
+--- !u!1 &1203014841333661539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5946433876477991842, guid: 47bc5d9974efc2e4a8835be70a9bd574, type: 3}
+  m_PrefabInstance: {fileID: 1203014841333661538}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
