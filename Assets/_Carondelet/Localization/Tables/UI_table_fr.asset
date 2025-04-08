@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_table_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 1afafbb30f2ae4748a1e53d654903475, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 703316910080
+    m_Localized: "D\xE9marrer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703421767680
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961984
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961985
+    m_Localized: Entrer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156288
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156289
+    m_Localized: Titre du Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156290
+    m_Localized: Sous-titre du Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156291
+    m_Localized: "Ext\xE9rieur du Palais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156292
+    m_Localized: "Points d\u2019int\xE9r\xEAt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156293
+    m_Localized: "Appuyez sur \"Tab\" pour alterner vers le mode de contr\xF4le accessible"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156294
+    m_Localized: "Utilisez le pav\xE9 num\xE9rique pour contr\xF4ler l'exp\xE9rience."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156295
+    m_Localized: Histoire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156296
+    m_Localized: "Fa\xE7ade avant"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156297
+    m_Localized: "Pierre d\u2019and\xE9site"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156298
+    m_Localized: "Alv\xE9oles vo\xFBt\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156299
+    m_Localized: Appuie sur "E" pour en savoir plus
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

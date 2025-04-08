@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
-// Script centralizado para todas las funciones de UI
 {
+
     [Header("Script References")]
     public AccessibilityManager accessibilityManager;
     
@@ -18,11 +18,10 @@ public class UIManager : MonoBehaviour
     [Header("Mobile UI Elements")]
     public List<GameObject> mobileUIObjects;
 
-   
-
     [Header("Fade Settings")]
     public CanvasGroup fadeCanva;
     public float fadeDuration = 0.4f;
+
 
     void Start()
     {
@@ -44,13 +43,21 @@ public class UIManager : MonoBehaviour
             accessibilityManager.enabled = true;
         }
     }
+    
 
     bool DetectMobileWebGL()
     {
         return Application.isMobilePlatform;
     }
 
-    // Función  para cargar  escena de forma asíncrona
+      private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+      FadeOut();
+       Debug.LogWarning(
+                "Se ejecuta funcion onSceneLoaded"
+            );
+    }
+
     public void StartAsyncLoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneWithFade(sceneName));
@@ -58,8 +65,8 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator LoadSceneWithFade(string sceneName)
     {
-        yield return FadeInCorutine(); // Esperar a que termine FadeIn completamente
-        yield return LoadSceneAsync(sceneName); //Empezar a cargar la escena
+        yield return FadeInCorutine();
+        yield return LoadSceneAsync(sceneName);
     }
 
     private IEnumerator LoadSceneAsync(string sceneName)
@@ -124,26 +131,22 @@ public class UIManager : MonoBehaviour
         fadeCanva.gameObject.SetActive(false);
     }
 
-    // Función de Fade In
     public void FadeIn()
     {
         StartCoroutine(FadeInCorutine());
     }
 
-    // Función de Fade Out
     public void FadeOut()
     {
         StartCoroutine(FadeOutCorutine());
     }
 
-    //Funcion mostrar Ui solo de mobile
     void ShowMobileUI()
     {
         SetActiveObjects(mobileUIObjects, true);
         SetActiveObjects(desktopUIObjects, false);
     }
 
-    //Funcion mostrar Ui solo de desktop
     void ShowDesktopUI()
     {
         SetActiveObjects(mobileUIObjects, false);

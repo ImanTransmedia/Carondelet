@@ -2,18 +2,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
-    //Este script desplbiega un panel hacer click o hover sobre un tooltip en espacio 3d, adicionalmente se pueden añadir funciones extras con eventos publicos en el inspector
-    [Header("Panel de despliegue")]
     public CanvasGroup panelCanvasGroup;
+    public TextMeshProUGUI targetText;
     public float fadeDuration = 0.2f;
 
-    [Header("Eventos Públicos")]
+    public Transform contenidoTransform;
+    
     public UnityEvent OnHoverEnter;
     public UnityEvent OnHoverExit;
     public UnityEvent OnClick;
+
+    public string sceneName; 
 
     private void SetPanelVisibility(bool visible)
     {
@@ -52,5 +55,27 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
         SetPanelVisibility(true);
 
     }
-}
 
+    private string GetTextFromContenidoChild()
+    {
+        if (contenidoTransform != null)
+        {
+            TextMeshProUGUI contenidoTMP = contenidoTransform.GetComponent<TextMeshProUGUI>();
+
+            if (contenidoTMP != null)
+            {
+                return contenidoTMP.text;
+            }
+        }
+
+        return string.Empty;
+    }
+
+    public void SetTargetTextFromContenido()
+    {
+        if (targetText != null)
+        {
+            targetText.text = GetTextFromContenidoChild();
+        }
+    }
+}

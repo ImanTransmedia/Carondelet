@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_table_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 1afafbb30f2ae4748a1e53d654903475, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 703316910080
+    m_Localized: Iniciar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703421767680
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961984
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703425961985
+    m_Localized: Entrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156288
+    m_Localized: Regresar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156289
+    m_Localized: "T\xEDtulo Men\xFA"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156290
+    m_Localized: "Subt\xEDtulo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156291
+    m_Localized: Exterior del palacio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156292
+    m_Localized: Puntos de interes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156293
+    m_Localized: Presiona "Tab" para alternar al modo de control accesible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156294
+    m_Localized: "Usa el teclado num\xE9rico para controlar la experiencia."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156295
+    m_Localized: Historia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156296
+    m_Localized: Fachada (frontal)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156297
+    m_Localized: Piedra Andesita
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156298
+    m_Localized: Covachas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 703430156299
+    m_Localized: Presiona "E" para saber mas
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
