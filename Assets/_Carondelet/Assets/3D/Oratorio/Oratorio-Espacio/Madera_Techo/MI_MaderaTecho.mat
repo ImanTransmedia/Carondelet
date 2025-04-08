@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MI_Masera-Esquina
+  m_Name: MI_MaderaTecho
   m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
   m_Parent: {fileID: 2100000, guid: 54f9f286553394a458eca5cbfb261b46, type: 2}
   m_ModifiedSerializedProperties: 2
@@ -26,27 +26,23 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: c64c8b297299f684abbf8092e44f8a98, type: 3}
+        m_Texture: {fileID: 2800000, guid: c569e7d4ec0292449b5a2020acbab3cf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: b4a8603ae39b37b4d9a636449d932ae5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5ce1f741bae37364e90cf27024397439, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _R_M_AO:
-        m_Texture: {fileID: 2800000, guid: 1e49fcd34fdede6428154a5fda4c60e2, type: 3}
+        m_Texture: {fileID: 2800000, guid: 47766adfa7d23354da16aef4c6acb5e6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 1
-    - _Glossiness: 0.57
-    - _Metallic: 0.29
-    - _MixRoughness: 1
-    - _NormalStrenght: 0.516
+    - _Metallic: 0
     - _UseAoMap: 1
     - _UseColorMap: 1
-    - _UseMetallicMap: 0
+    - _UseMetallicMap: 1
     - _UseNormalMap: 1
     - _UseRoughnessMap: 1
     m_Colors: []
