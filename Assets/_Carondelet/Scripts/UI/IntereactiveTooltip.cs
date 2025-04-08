@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using System.Collections.Generic;
 using TMPro;
 
 public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
@@ -15,8 +16,8 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     public UnityEvent OnHoverEnter;
     public UnityEvent OnHoverExit;
     public UnityEvent OnClick;
+    public List<GameObject> buttonList;
 
-    public string sceneName; 
 
     private void SetPanelVisibility(bool visible)
     {
@@ -53,7 +54,6 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     public void OnPointerClick(PointerEventData eventData)
     {
         SetPanelVisibility(true);
-
     }
 
     private string GetTextFromContenidoChild()
@@ -75,7 +75,14 @@ public class IntereactiveTooltip : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         if (targetText != null)
         {
-            targetText.text = GetTextFromContenidoChild();
+                targetText.text = GetTextFromContenidoChild();
+                for (int i = 0; i < buttonList.Count; i++)
+            {
+                if (buttonList[i] != null)
+                {   
+                    buttonList[i].SetActive(i == 0);
+                }
+            }
         }
     }
 }

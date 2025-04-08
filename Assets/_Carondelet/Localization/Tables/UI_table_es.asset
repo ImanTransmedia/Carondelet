@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Presiona "E" para saber mas
     m_Metadata:
       m_Items: []
+  - m_Id: 1403073334632448
+    m_Localized: "Bar\xF3n de Carondelet"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: Appuie sur "E" pour en savoir plus
     m_Metadata:
       m_Items: []
+  - m_Id: 1403073334632448
+    m_Localized: Baron de Carondelet
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

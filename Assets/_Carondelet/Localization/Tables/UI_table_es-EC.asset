@@ -82,6 +82,10 @@ MonoBehaviour:
     m_Localized: '"E" klikchi kaspaka yachaykunata rikuy'
     m_Metadata:
       m_Items: []
+  - m_Id: 1403073334632448
+    m_Localized: Carondelet Hatun Runa
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
