@@ -843,6 +843,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1640063088498608193, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1986739936791697474, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: button
       value: 
@@ -1011,6 +1015,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 3432378065266562582, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3636793416741528364, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -1147,13 +1155,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5777696316220117876, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814432017418350616, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_Name
       value: Tooltip_interactivo_DIEGETICO_covachas
       objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390209994523071219, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126560151816547802, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3082,6 +3110,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1640063088498608193, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1986739936791697474, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: button
       value: 
@@ -3250,6 +3282,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 3432378065266562582, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3636793416741528364, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -3386,13 +3422,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5777696316220117876, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814432017418350616, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_Name
       value: Tooltip_interactivo_DIEGETICO_andesita
       objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390209994523071219, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126560151816547802, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4233,8 +4289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textComponent: {fileID: 0}
+  dialoguePanel: {fileID: 0}
   textSpeed: 0.05
-  timeBetweenLines: 1
+  waitBetweenSegments: 1
+  linesPerSegment: 3
+  dialogueList: []
 --- !u!1 &1432425711
 GameObject:
   m_ObjectHideFlags: 0
@@ -5149,7 +5208,7 @@ MonoBehaviour:
   m_RenderShadows: 1
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
-  m_CameraType: 1
+  m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -5518,6 +5577,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1640063088498608193, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1986739936791697474, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: button
       value: 
@@ -5730,6 +5793,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 3432378065266562582, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3636793416741528364, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -5871,12 +5938,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5777696316220117876, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5777696316220117876, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814432017418350616, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_Name
       value: Tooltip_interactivo_DIEGETICO_historia
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_IsActive
@@ -5887,12 +5966,20 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6390209994523071219, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390209994523071219, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8630653972143012938, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126560151816547802, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9126560151816547802, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_IsActive
@@ -5997,6 +6084,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1271417268356592431, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1640063088498608193, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1986739936791697474, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
@@ -6167,6 +6258,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 999
       objectReference: {fileID: 0}
+    - target: {fileID: 3432378065266562582, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3636793416741528364, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -6303,13 +6398,33 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5777696316220117876, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814432017418350616, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_Name
       value: Tooltip_interactivo_DIEGETICO_fachada
       objectReference: {fileID: 0}
     - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6035300218476683898, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390209994523071219, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126560151816547802, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
