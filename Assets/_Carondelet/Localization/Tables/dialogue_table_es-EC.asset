@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: dialogue_table_es-EC
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-EC
+  m_SharedData: {fileID: 11400000, guid: 57db7eafe86a3fd4ca58917620bd8abe, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 57855467520
+    m_Localized: "Kawsaykuyki Carondelet Wasi man. \xD1uqaka Carondelet Hatun Runa
+      kani, kikinkunawan puriyta riksichkani. Shukllatak willakuykunata, pakarikuna
+      rikuchun."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 57956130816
+    m_Localized: "Kay wakakunapi yanapakuyki, riksichikuyki munani. Mana yachanki
+      chaykunata, \xF1ukata tapuy, yanapani."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
