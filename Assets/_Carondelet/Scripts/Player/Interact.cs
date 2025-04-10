@@ -30,7 +30,7 @@ public class Interact : MonoBehaviour
             Debug.Log("Mandando Señal De Interaccion");
             TryInteract();
     }
-    private void TryInteract()
+    public void TryInteract()
     {
         // Raycast para detectar objetos interactuables
         Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
