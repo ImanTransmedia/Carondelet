@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_IsActive
@@ -83,5 +83,61 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1320193911615029484}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2758347000887771543}
   m_SourcePrefab: {fileID: 100100000, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
+--- !u!1 &3688847383875500674 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
+  m_PrefabInstance: {fileID: 4607185680266299347}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &-1320193911615029484
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688847383875500674}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.1097583
+  m_Height: 0.9211669
+  m_Direction: 1
+  m_Center: {x: -0.04631732, y: 0.009894895, z: 1.139412}
+--- !u!114 &-2758347000887771543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3688847383875500674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77b2ded2c7d0c7244aabec323ea7176e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemName: Virgen 2
+  itemSubTitle: Lorem Ipsum
+  itemDescription: Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+  item3DPrefab: {fileID: 0}
+  onDisplayStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onDisplayEnd:
+    m_PersistentCalls:
+      m_Calls: []

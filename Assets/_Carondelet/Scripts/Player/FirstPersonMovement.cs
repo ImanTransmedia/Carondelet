@@ -77,6 +77,7 @@ public class FirstPersonMovement : MonoBehaviour
     {
         HandleMovement();
         HandleMouseLook();
+        controller.Move(new Vector3(0,-1,0));
         if (controller.velocity.magnitude > 0)
         {
             //stepSFX.enabled = true;
