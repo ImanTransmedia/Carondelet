@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 
 public class UIManager : MonoBehaviour
 {
 
     [Header("Script References")]
+    public SceneLoader sceneLoader;
     public AccessibilityManager accessibilityManager;
     
     [Header("Mobile device status")]
@@ -35,12 +36,12 @@ public class UIManager : MonoBehaviour
         if (isMobile)
         {
             ShowMobileUI();
-            accessibilityManager.enabled = false;
+         //   accessibilityManager.enabled = false;
         }
         else
         {
             ShowDesktopUI();
-            accessibilityManager.enabled = true;
+         //   accessibilityManager.enabled = true;
         }
     }
     
@@ -50,13 +51,6 @@ public class UIManager : MonoBehaviour
         return Application.isMobilePlatform;
     }
 
-      private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-      FadeOut();
-       Debug.LogWarning(
-                "Se ejecuta funcion onSceneLoaded"
-            );
-    }
 
     public void StartAsyncLoadScene(string sceneName)
     {
@@ -65,18 +59,14 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator LoadSceneWithFade(string sceneName)
     {
+        
         yield return FadeInCorutine();
-        yield return LoadSceneAsync(sceneName);
-    }
-
-    private IEnumerator LoadSceneAsync(string sceneName)
-    {
-        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-        while (!operation.isDone)
+        if (sceneLoader != null)
         {
-            yield return null;
+            sceneLoader.StartAsyncLoadScene(sceneName); 
         }
     }
+
 
     public void TogglePanel(GameObject panel, bool state)
     {

@@ -1193,6 +1193,50 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1271417268356592431, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
   m_PrefabInstance: {fileID: 291833948}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &373871582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373871584}
+  - component: {fileID: 373871583}
+  m_Layer: 0
+  m_Name: SceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &373871583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373871582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7674f02b4ef961842b14ecd6026e6577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &373871584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373871582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &381986147
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,6 +2305,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6306235629924054925, guid: 9999a662e74170d40aec4ad5711f543a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6372999453118792737, guid: 9999a662e74170d40aec4ad5711f543a, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4236,6 +4284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b127621adefdf9d4c95e5f2605041da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 373871583}
   accessibilityManager: {fileID: 1373845276}
   isMobile: 0
   desktopUIObjects:
@@ -6908,6 +6957,7 @@ SceneRoots:
   - {fileID: 523625198}
   - {fileID: 716216426}
   - {fileID: 1951900938}
+  - {fileID: 373871584}
   - {fileID: 1373845278}
   - {fileID: 381986152}
   - {fileID: 1334000607}
