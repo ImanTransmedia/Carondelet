@@ -21,10 +21,14 @@ public class AccessibilityManager : MonoBehaviour
 
     void Start()
     {
+        enableAlternativeControls = false;
         UpdateButtonList();
-        if (enableAlternativeControls)
+        ToggleKeyLabels(enableAlternativeControls);
+        if (enableAlternativeControls) {
             AssignKeyBindings();
-        SetControlSettings();
+            SetControlSettings();
+        }
+      
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
