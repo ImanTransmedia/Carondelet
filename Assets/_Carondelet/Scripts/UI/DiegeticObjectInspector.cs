@@ -3,12 +3,19 @@ using System.Collections;
 
 public class DiegeticObjectInspector : MonoBehaviour
 {
-    //Este script sirve unicamente para la interaccion con el diorama
+    //Este script sirve para la interaccion con el diorama
     [Header("Camera configuration")]
     public Transform cameraTransform;
     public float moveSpeed = 5f;
     public float rotationSpeed = 5f;
     public float zoomDistance = 2f;
+
+    [Header("Diorama configuration")]
+    public GameObject diorama;
+    public float rotationDuration = 1f;
+    public AnimationCurve rotationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+
+    private Coroutine rotationCoroutine;
 
     [Header("UI Panels")]
     public CanvasGroup panelAreaExterior; // Panel por defecto
@@ -33,6 +40,7 @@ public class DiegeticObjectInspector : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(MoveToTarget(target));
         StartCoroutine(SwitchPanelsWithFade(panelAreaExterior, panelAreaSeleccionada));
+        RotateObject();
     }
 
     // Restablece la cámara a su posición inicial
@@ -114,5 +122,42 @@ public class DiegeticObjectInspector : MonoBehaviour
             yield return null;
         }
         canvasGroup.alpha = 0f;
+    }
+
+
+     public void RotateObject()
+    {
+        if (diorama == null) return;
+
+        if (rotationCoroutine != null)
+            StopCoroutine(rotationCoroutine);
+
+        rotationCoroutine = StartCoroutine(RotateOverTime());
+    }
+
+    private IEnumerator RotateOverTime()
+    {
+        float elapsed = 0f;
+        float startY = diorama.transform.eulerAngles.y;
+
+        while (elapsed < rotationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / rotationDuration);
+            float angle = rotationCurve.Evaluate(t) * 360f;
+            float currentY = startY + angle;
+
+            Vector3 currentEuler = diorama.transform.eulerAngles;
+            diorama.transform.eulerAngles = new Vector3(currentEuler.x, currentY, currentEuler.z);
+
+            yield return null;
+        }
+
+        // Asegurar que termine exactamente en el ángulo final
+        float finalY = startY + 360f;
+        Vector3 finalEuler = diorama.transform.eulerAngles;
+        diorama.transform.eulerAngles = new Vector3(finalEuler.x, finalY, finalEuler.z);
+
+        rotationCoroutine = null;
     }
 }
