@@ -1391,6 +1391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b127621adefdf9d4c95e5f2605041da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 0}
   accessibilityManager: {fileID: 1307480423}
   isMobile: 0
   desktopUIObjects:
