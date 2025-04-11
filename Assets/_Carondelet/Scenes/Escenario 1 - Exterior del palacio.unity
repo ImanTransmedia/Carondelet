@@ -1037,11 +1037,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 15.019997
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 4686767223451281498, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3304,11 +3304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 15.019997
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 4686767223451281498, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -5796,11 +5796,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 15.019997
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 4686767223451281498, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -6261,11 +6261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 15.019997
       objectReference: {fileID: 0}
     - target: {fileID: 4593115909088358141, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 10.06
       objectReference: {fileID: 0}
     - target: {fileID: 4686767223451281498, guid: 6c467c329ee8a2e418b1989af05c288a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
