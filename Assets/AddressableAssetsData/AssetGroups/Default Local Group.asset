@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 101772f55e471ea4a83e248808ba6e3d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 940ca66cd4e84344ea4c1e8028f7071f
+    m_Address: Assets/_Carondelet/Prefabs/Cuartos y Escenas/Oratorio Room.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7fcde95bc98c7fd4ca5f7ff6e63587a2, type: 2}
   m_SchemaSet:

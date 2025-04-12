@@ -2,10 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public class SceneLoader : MonoBehaviour
 {
-    //metodo publico para cargar escenas
     public void StartAsyncLoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
