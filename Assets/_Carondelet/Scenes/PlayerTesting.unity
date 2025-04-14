@@ -6924,6 +6924,8 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
+  interactPrefab: {fileID: 8098128224360736895, guid: 9282f0f26d2151f40b014da252b0756a, type: 3}
+  offsetAbove: {x: 0, y: 0.12, z: 0}
 --- !u!43 &1270462180
 Mesh:
   m_ObjectHideFlags: 0
