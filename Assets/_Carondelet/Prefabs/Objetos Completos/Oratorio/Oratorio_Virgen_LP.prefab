@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 19.51875
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7186353
+      value: 4.5387626
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07564211
+      value: -12.495995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57ba7cd81267e8a4da66087f66ce1962, type: 3}
       propertyPath: m_LocalRotation.w
@@ -134,7 +134,7 @@ MonoBehaviour:
   itemName: Virgen 2
   itemSubTitle: Lorem Ipsum
   itemDescription: Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-  item3DPrefab: {fileID: 0}
+  item3DPrefab: {fileID: 6933318289591137985, guid: 7ef388dbf6c4c374eb327e8eeeb0779b, type: 3}
   onDisplayStart:
     m_PersistentCalls:
       m_Calls: []

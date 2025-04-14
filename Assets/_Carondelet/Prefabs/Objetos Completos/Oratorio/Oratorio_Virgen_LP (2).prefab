@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34870c2a2e0113b45bc509bd8d722b84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 17.500948
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34870c2a2e0113b45bc509bd8d722b84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.7186353
+      value: 4.660392
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34870c2a2e0113b45bc509bd8d722b84, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07564211
+      value: -12.495995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34870c2a2e0113b45bc509bd8d722b84, type: 3}
       propertyPath: m_LocalRotation.w
@@ -135,7 +135,7 @@ MonoBehaviour:
   itemSubTitle: Lorem Ipsum
   itemDescription: Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem
     IpsumLorem Ipsum
-  item3DPrefab: {fileID: 0}
+  item3DPrefab: {fileID: 7308162049328972965, guid: 406ceaf37a0ea854ba9dc408ca9c4ebd, type: 3}
   onDisplayStart:
     m_PersistentCalls:
       m_Calls: []

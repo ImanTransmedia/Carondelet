@@ -22,23 +22,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -12.495995
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalRotation.y
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 98b8259b581852c45b3dd4d49acd2137, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -134,7 +134,7 @@ MonoBehaviour:
   itemName: Cristo
   itemSubTitle: Crucificado
   itemDescription: Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
-  item3DPrefab: {fileID: 0}
+  item3DPrefab: {fileID: 9030048121334115418, guid: 1acbd6c029544414a8290c55f556bd51, type: 3}
   onDisplayStart:
     m_PersistentCalls:
       m_Calls: []
