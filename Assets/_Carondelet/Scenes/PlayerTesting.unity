@@ -5525,6 +5525,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2319337616181998423, guid: 940ca66cd4e84344ea4c1e8028f7071f, type: 3}
+      propertyPath: itemName.m_TableEntryReference.m_KeyId
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319337616181998423, guid: 940ca66cd4e84344ea4c1e8028f7071f, type: 3}
+      propertyPath: itemName.m_TableReference.m_TableCollectionName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5879017409211616048, guid: 940ca66cd4e84344ea4c1e8028f7071f, type: 3}
       propertyPath: m_Name
       value: Oratorio Room

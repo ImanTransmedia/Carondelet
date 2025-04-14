@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class ItemDisplay : MonoBehaviour
 {
     [Header("Configuración del Objeto")]
-    [SerializeField] private string itemName = "Objeto";
-     [SerializeField] private string itemSubTitle = "sub titulo";
-    [TextArea] [SerializeField] private string itemDescription = "Descripción del objeto...";
+    [SerializeField] private LocalizedString  itemName;
+    [SerializeField] private LocalizedString  itemSubTitle;
+    [SerializeField] private LocalizedString  itemDescription;
     [SerializeField] private GameObject item3DPrefab; // Prefab del modelo 3D
 
     [Header("Eventos")]
@@ -30,8 +32,12 @@ public class ItemDisplay : MonoBehaviour
 
     private void ShowItemUI()
     {
+        string name = itemName.GetLocalizedString();
+        string subTitle = itemSubTitle.GetLocalizedString();
+        string description = itemDescription.GetLocalizedString();
+
         // Notifica al UI Manager
-        UIIngameManager.Instance.ShowItemPanel(itemName, itemSubTitle, itemDescription);
+       UIIngameManager.Instance.ShowItemPanel(name, subTitle, description);
 
         // Crea el modelo 3D en la UI
         if (item3DPrefab != null)
