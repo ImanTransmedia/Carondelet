@@ -23,4 +23,23 @@ public class LanguageManager : MonoBehaviour
 
         isSwitching = false;
     }
+
+     public void SetLanguageByIndex(int index)
+    {
+        if (isSwitching) return;
+        StartCoroutine(ChangeLanguageByIndex(index));
+    }
+
+    private IEnumerator ChangeLanguageByIndex(int index)
+    {
+        isSwitching = true;
+        yield return LocalizationSettings.InitializationOperation;
+
+        if (index >= 0 && index < LocalizationSettings.AvailableLocales.Locales.Count)
+        {
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+        }
+
+        isSwitching = false;
+    }
 }
