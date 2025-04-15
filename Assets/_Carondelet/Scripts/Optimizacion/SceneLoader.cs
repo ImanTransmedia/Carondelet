@@ -38,11 +38,6 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "Main Player")
