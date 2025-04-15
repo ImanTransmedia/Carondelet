@@ -7126,7 +7126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 0}
-  depthOfFieldTarget: {fileID: 1707427390}
+  depthOfFieldTarget: {fileID: 0}
 --- !u!114 &630730464
 MonoBehaviour:
   m_ObjectHideFlags: 0
