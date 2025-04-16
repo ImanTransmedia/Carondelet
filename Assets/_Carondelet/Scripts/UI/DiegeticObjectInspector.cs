@@ -9,6 +9,17 @@ public class DiegeticObjectInspector : MonoBehaviour
     public float rotationSpeed = 5f;
     public float zoomDistance = 2f;
 
+    [Header("FOV Zoom Settings")]
+    public float initialFOV = 60f;
+    public float zoomFOV = 40f;
+    public float fovTransitionDuration = 0.5f;
+
+    private Camera cam;
+
+    [Header("Configuracion entrada")]
+    public float duration = 2f;
+    public float speed = 0.25f;
+
     [Header("Diorama configuration")]
     public GameObject diorama;
 
@@ -24,6 +35,18 @@ public class DiegeticObjectInspector : MonoBehaviour
     void Start()
     {
         if (cameraTransform == null) return;
+
+        cam = cameraTransform.GetComponent<Camera>();
+        if (cam == null)
+        {
+            cam = cameraTransform.GetComponentInChildren<Camera>();
+        }
+
+        if (cam != null)
+        {
+            cam.fieldOfView = initialFOV;
+        }
+
         initialPosition = cameraTransform.position;
         initialRotation = cameraTransform.rotation;
     }
@@ -35,7 +58,8 @@ public class DiegeticObjectInspector : MonoBehaviour
         StartCoroutine(MoveToTarget(target));
         StartCoroutine(SwitchPanelsWithFade(panelAreaExterior, panelAreaSeleccionada));
 
-        // RotateObject();
+        if (cam != null)
+            StartCoroutine(ChangeFOV(cam.fieldOfView, zoomFOV, fovTransitionDuration));
     }
 
     public void ResetCamera()
@@ -44,6 +68,9 @@ public class DiegeticObjectInspector : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(ReturnToStart());
         StartCoroutine(SwitchPanelsWithFade(panelAreaSeleccionada, panelAreaExterior));
+
+        if (cam != null)
+            StartCoroutine(ChangeFOV(cam.fieldOfView, initialFOV, fovTransitionDuration));
     }
 
     private IEnumerator MoveToTarget(Transform target)
@@ -115,9 +142,38 @@ public class DiegeticObjectInspector : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
-    // Función y Coroutine de rotación eliminadas
-    /*
-    public void RotateObject() { ... }
-    private IEnumerator RotateOverTime() { ... }
-    */
+    private IEnumerator ChangeFOV(float startFOV, float endFOV, float duration)
+    {
+        float elapsed = 0f;
+        while (elapsed < duration)
+        {
+            if (cam != null)
+            {
+                cam.fieldOfView = Mathf.Lerp(startFOV, endFOV, elapsed / duration);
+                elapsed += Time.deltaTime;
+            }
+            yield return null;
+        }
+        if (cam != null)
+            cam.fieldOfView = endFOV;
+    }
+
+    public void MoveCameraForward()
+    {
+        if (cameraTransform == null) return;
+        StopAllCoroutines();
+        StartCoroutine(MoveCameraForwardCoroutine(duration, speed));
+    }
+
+    private IEnumerator MoveCameraForwardCoroutine(float duration, float speed)
+    {
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            cameraTransform.position += cameraTransform.forward * speed * Time.deltaTime;
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+    }
 }
