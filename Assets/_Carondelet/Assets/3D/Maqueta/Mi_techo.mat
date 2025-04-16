@@ -8,12 +8,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Mi_techo
-  m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_Parent: {fileID: 2100000, guid: 54f9f286553394a458eca5cbfb261b46, type: 2}
   m_ModifiedSerializedProperties: 2
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _NORMALMAP
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -25,6 +26,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 719d8d00344636e448c1111ca019083b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: df96d7739780ab44792c52e608022531, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -51,7 +56,7 @@ Material:
     - _UseNormalMap: 1
     - _UseRoughnessMap: 0
     m_Colors:
-    - _Color: {r: 1, g: 0.96361184, b: 0.96361184, a: 1}
+    - _Color: {r: 0.7461407, g: 0.7461407, b: 0.7461407, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &860775672086450182
