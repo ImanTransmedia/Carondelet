@@ -3,7 +3,6 @@ using System.Collections;
 
 public class DiegeticObjectInspector : MonoBehaviour
 {
-    //Este script sirve para la interaccion con el diorama
     [Header("Camera configuration")]
     public Transform cameraTransform;
     public float moveSpeed = 5f;
@@ -12,14 +11,10 @@ public class DiegeticObjectInspector : MonoBehaviour
 
     [Header("Diorama configuration")]
     public GameObject diorama;
-    public float rotationDuration = 1f;
-    public AnimationCurve rotationCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-
-    private Coroutine rotationCoroutine;
 
     [Header("UI Panels")]
-    public CanvasGroup panelAreaExterior; // Panel por defecto
-    public CanvasGroup panelAreaSeleccionada; // Panel cuando se inspecciona un objeto
+    public CanvasGroup panelAreaExterior;
+    public CanvasGroup panelAreaSeleccionada;
     public float fadeDuration = 0.4f;
 
     private Vector3 initialPosition;
@@ -33,17 +28,16 @@ public class DiegeticObjectInspector : MonoBehaviour
         initialRotation = cameraTransform.rotation;
     }
 
-    // Mueve la cámara para inspeccionar un objeto
     public void InspectObject(Transform target)
     {
         if (isReturning || cameraTransform == null) return;
         StopAllCoroutines();
         StartCoroutine(MoveToTarget(target));
         StartCoroutine(SwitchPanelsWithFade(panelAreaExterior, panelAreaSeleccionada));
-        RotateObject();
+
+        // RotateObject();
     }
 
-    // Restablece la cámara a su posición inicial
     public void ResetCamera()
     {
         if (cameraTransform == null) return;
@@ -88,7 +82,6 @@ public class DiegeticObjectInspector : MonoBehaviour
         isReturning = false;
     }
 
-    // Corutina para alternar entre los paneles con Fade
     private IEnumerator SwitchPanelsWithFade(CanvasGroup fadeOutPanel, CanvasGroup fadeInPanel)
     {
         yield return StartCoroutine(FadeOut(fadeOutPanel));
@@ -98,7 +91,6 @@ public class DiegeticObjectInspector : MonoBehaviour
         yield return StartCoroutine(FadeIn(fadeInPanel));
     }
 
-    // Fade In para un CanvasGroup
     private IEnumerator FadeIn(CanvasGroup canvasGroup)
     {
         float elapsedTime = 0f;
@@ -111,7 +103,6 @@ public class DiegeticObjectInspector : MonoBehaviour
         canvasGroup.alpha = 1f;
     }
 
-    // Fade Out para un CanvasGroup
     private IEnumerator FadeOut(CanvasGroup canvasGroup)
     {
         float elapsedTime = 0f;
@@ -124,40 +115,9 @@ public class DiegeticObjectInspector : MonoBehaviour
         canvasGroup.alpha = 0f;
     }
 
-
-     public void RotateObject()
-    {
-        if (diorama == null) return;
-
-        if (rotationCoroutine != null)
-            StopCoroutine(rotationCoroutine);
-
-        rotationCoroutine = StartCoroutine(RotateOverTime());
-    }
-
-    private IEnumerator RotateOverTime()
-    {
-        float elapsed = 0f;
-        float startY = diorama.transform.eulerAngles.y;
-
-        while (elapsed < rotationDuration)
-        {
-            elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / rotationDuration);
-            float angle = rotationCurve.Evaluate(t) * 360f;
-            float currentY = startY + angle;
-
-            Vector3 currentEuler = diorama.transform.eulerAngles;
-            diorama.transform.eulerAngles = new Vector3(currentEuler.x, currentY, currentEuler.z);
-
-            yield return null;
-        }
-
-        // Asegurar que termine exactamente en el ángulo final
-        float finalY = startY + 360f;
-        Vector3 finalEuler = diorama.transform.eulerAngles;
-        diorama.transform.eulerAngles = new Vector3(finalEuler.x, finalY, finalEuler.z);
-
-        rotationCoroutine = null;
-    }
+    // Función y Coroutine de rotación eliminadas
+    /*
+    public void RotateObject() { ... }
+    private IEnumerator RotateOverTime() { ... }
+    */
 }
