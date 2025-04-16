@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class UIManager : MonoBehaviour
 {
-
     [Header("Script References")]
     public SceneLoader sceneLoader;
     public AccessibilityManager accessibilityManager;
-    
+
     [Header("Mobile device status")]
     public bool isMobile;
 
@@ -21,8 +19,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Fade Settings")]
     public CanvasGroup fadeCanva;
-    public float fadeDuration = 0.4f;
-
+    public float fadeInDuration = 1f;
+    public float fadeOutDuration = 3f;
 
     void Start()
     {
@@ -36,21 +34,19 @@ public class UIManager : MonoBehaviour
         if (isMobile)
         {
             ShowMobileUI();
-         //   accessibilityManager.enabled = false;
+            //   accessibilityManager.enabled = false;
         }
         else
         {
             ShowDesktopUI();
-         //   accessibilityManager.enabled = true;
+            //   accessibilityManager.enabled = true;
         }
     }
-    
 
     bool DetectMobileWebGL()
     {
         return Application.isMobilePlatform;
     }
-
 
     public void StartAsyncLoadScene(string sceneName)
     {
@@ -59,14 +55,12 @@ public class UIManager : MonoBehaviour
 
     private IEnumerator LoadSceneWithFade(string sceneName)
     {
-        
         yield return FadeInCorutine();
         if (sceneLoader != null)
         {
-            sceneLoader.StartAsyncLoadScene(sceneName); 
+            sceneLoader.StartAsyncLoadScene(sceneName);
         }
     }
-
 
     public void TogglePanel(GameObject panel, bool state)
     {
@@ -98,10 +92,10 @@ public class UIManager : MonoBehaviour
     {
         fadeCanva.gameObject.SetActive(true);
         float elapsedTime = 0f;
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < fadeInDuration)
         {
             elapsedTime += Time.deltaTime;
-            fadeCanva.alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeDuration);
+            fadeCanva.alpha = Mathf.Lerp(0f, 1f, elapsedTime / fadeInDuration);
             yield return null;
         }
         fadeCanva.alpha = 1f;
@@ -111,10 +105,10 @@ public class UIManager : MonoBehaviour
     {
         fadeCanva.gameObject.SetActive(true);
         float elapsedTime = 0f;
-        while (elapsedTime < fadeDuration)
+        while (elapsedTime < fadeOutDuration)
         {
             elapsedTime += Time.deltaTime;
-            fadeCanva.alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeDuration);
+            fadeCanva.alpha = Mathf.Lerp(1f, 0f, elapsedTime / fadeOutDuration);
             yield return null;
         }
         fadeCanva.alpha = 0f;
