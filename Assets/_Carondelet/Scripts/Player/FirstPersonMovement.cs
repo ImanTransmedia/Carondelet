@@ -59,10 +59,6 @@ public class FirstPersonMovement : MonoBehaviour
         //inputActions.Player.Interact.started -= OnInteractPerformed;
         inputActions.Player.Disable();
     }
-    //private void OnInteractPerformed(InputAction.CallbackContext context)
-    //{
-    //    Debug.Log("Mandando Señal De Interaccion");
-    //}
 
     private void OnMove(InputAction.CallbackContext context)
     {

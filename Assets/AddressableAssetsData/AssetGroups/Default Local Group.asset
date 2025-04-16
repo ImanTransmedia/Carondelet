@@ -15,14 +15,8 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 101772f55e471ea4a83e248808ba6e3d
   m_SerializeEntries:
-  - m_GUID: 14a0a6712a59f684486cf2214825103d
-    m_Address: Assets/_Carondelet/Prefabs/Cuartos y Escenas/Plaza Interior.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - default
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 940ca66cd4e84344ea4c1e8028f7071f
-    m_Address: Assets/_Carondelet/Prefabs/Cuartos y Escenas/Oratorio Room.prefab
+  - m_GUID: 53b1405078b7a2c4db707e850b711de5
+    m_Address: Assets/_Carondelet/Scenes/Armado De Escenas Final/Oratorio.unity
     m_ReadOnly: 0
     m_SerializedLabels:
     - default

@@ -1,16 +1,22 @@
 using UnityEngine;
+using UnityEngine.ResourceManagement.ResourceProviders;
 
 public class DoorManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public static DoorManager Instance;
+    public string LastDoorUsed { get; set; }
+    public SceneInstance PreviousScene { get; set; }
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

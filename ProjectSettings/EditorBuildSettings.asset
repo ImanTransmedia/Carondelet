@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Carondelet/Scenes/Armado De Escenas Final/Patio Interior.unity
     guid: 24a0ec21ce5ed7044ab97f5cd01ff6d0
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Carondelet/Scenes/Armado De Escenas Final/Oratorio.unity
     guid: 53b1405078b7a2c4db707e850b711de5
   - enabled: 1
