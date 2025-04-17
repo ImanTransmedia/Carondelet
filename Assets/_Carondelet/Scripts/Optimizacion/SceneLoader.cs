@@ -27,10 +27,10 @@ public class SceneLoader : MonoBehaviour
     public void LoadNewScene()
     {
         // Release previous scene if needed
-        if (_sceneLoadHandle.IsValid())
-        {
-            Addressables.Release(_sceneLoadHandle);
-        }
+        //if (_sceneLoadHandle.IsValid())
+        //{
+        //    Addressables.Release(_sceneLoadHandle);
+        //}
 
         _sceneLoadHandle = Addressables.LoadSceneAsync(targetScene,
             LoadSceneMode.Single,
