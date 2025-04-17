@@ -7634,7 +7634,8 @@ MonoBehaviour:
   mobileUIObjects:
   - {fileID: 1203014841333661539}
   fadeCanva: {fileID: 691408979}
-  fadeDuration: 0.55
+  fadeInDuration: 1
+  fadeOutDuration: 3
 --- !u!4 &1793938915
 Transform:
   m_ObjectHideFlags: 0
