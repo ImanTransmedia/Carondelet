@@ -9,11 +9,12 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_MaderaSocalos
   m_Shader: {fileID: -6465566751694194690, guid: c7a31a031552d0e428d982093bd6606c, type: 3}
-  m_Parent: {fileID: 2100000, guid: 54f9f286553394a458eca5cbfb261b46, type: 2}
+  m_Parent: {fileID: 2100000, guid: 2e81f0dabf95899449eec9d97fa77750, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
-  m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_InvalidKeywords:
+  - _NORMALMAP
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -25,6 +26,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 5ce1f741bae37364e90cf27024397439, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: c569e7d4ec0292449b5a2020acbab3cf, type: 3}
         m_Scale: {x: 1, y: 1}

@@ -23,6 +23,8 @@ public class FirstPersonMovement : MonoBehaviour
     private Transform cameraHolder;
     private float xRotation = 0f;
 
+    public bool isInteracting;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -34,6 +36,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     private void Awake()
     {
+        isInteracting = false;
         inputActions = new InputSystem_Actions();
     }
 
@@ -56,10 +59,6 @@ public class FirstPersonMovement : MonoBehaviour
         //inputActions.Player.Interact.started -= OnInteractPerformed;
         inputActions.Player.Disable();
     }
-    //private void OnInteractPerformed(InputAction.CallbackContext context)
-    //{
-    //    Debug.Log("Mandando Señal De Interaccion");
-    //}
 
     private void OnMove(InputAction.CallbackContext context)
     {
@@ -75,9 +74,12 @@ public class FirstPersonMovement : MonoBehaviour
 
     void Update()
     {
-        HandleMovement();
-        HandleMouseLook();
-        controller.Move(new Vector3(0,-1,0));
+        if (!isInteracting)
+        {
+            HandleMovement();
+            HandleMouseLook();
+        }
+        controller.Move(new Vector3(0,-0.1f,0));
         if (controller.velocity.magnitude > 0)
         {
             //stepSFX.enabled = true;

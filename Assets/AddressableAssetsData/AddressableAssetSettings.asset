@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 101772f55e471ea4a83e248808ba6e3d
   m_currentHash:
     serializedVersion: 2
-    Hash: 4db0f72bf13524fc22dfdd38d9527c27
+    Hash: 02f8e500efaaba2746d130ff06072ead
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -84,7 +84,7 @@ MonoBehaviour:
       - m_Id: ac7e5039a7050ba4582a2b1c9b1e5cdb
         m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
       - m_Id: ee94585c58d36f5419854d0d9e68dae7
-        m_Value: <undefined>
+        m_Value: https://bucket-tour-virtual.s3.us-east-1.amazonaws.com/StreamingAssets/aa/WebGL/0c3a9c9c5c5ea1537a74aaac56a8adfd_monoscripts_2b5f29a58f463ecf4f99b3562d39fba6.bundle
     m_ProfileEntryNames:
     - m_Id: 0e534b31f49fcd74d989ec9908a646f3
       m_Name: Remote.BuildPath

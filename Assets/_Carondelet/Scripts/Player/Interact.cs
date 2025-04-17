@@ -12,6 +12,8 @@ public class Interact : MonoBehaviour
     [SerializeField]
     private LayerMask interactableLayer;
 
+    public FirstPersonMovement firstPerson;
+
     private void Awake()
     {
         inputActions = new InputSystem_Actions();
@@ -47,6 +49,15 @@ public class Interact : MonoBehaviour
             if (item != null)
             {
                 item.OnInteract();
+                if (firstPerson.isInteracting == false)
+                {
+                    firstPerson.isInteracting = true;
+                }
+                else
+                {
+                    firstPerson.isInteracting = false;
+                }
+
             }
         }
     }
