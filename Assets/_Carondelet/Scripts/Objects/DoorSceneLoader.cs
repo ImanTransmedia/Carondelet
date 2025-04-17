@@ -23,6 +23,12 @@ public class DoorSceneLoader : MonoBehaviour
         LoadNewScene();
     }
 
+    public void LoadSceneAdressable()
+    {
+        ShowLoadingScreen();
+        LoadNewScene();
+    }
+
     private void ShowLoadingScreen()
     {
         if (!loadingScreenPrefab) return;

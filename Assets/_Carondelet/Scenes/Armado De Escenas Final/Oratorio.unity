@@ -2656,6 +2656,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674f02b4ef961842b14ecd6026e6577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene:
+    m_AssetGUID: 24a0ec21ce5ed7044ab97f5cd01ff6d0
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!65 &961058466
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3374,6 +3380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674f02b4ef961842b14ecd6026e6577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &1366193678
 Transform:
   m_ObjectHideFlags: 0
