@@ -127,7 +127,6 @@ public class UIIngameManager : MonoBehaviour
 
         currentModel.layer = LayerMask.NameToLayer("UI Model");
 
-
         modelRenderCamera.cullingMask = modelRenderLayer;
     }
 
