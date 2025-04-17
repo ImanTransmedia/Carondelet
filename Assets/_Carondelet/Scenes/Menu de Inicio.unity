@@ -10343,10 +10343,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1510925391}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: StartAsyncLoadScene
-        m_Mode: 5
+      - m_Target: {fileID: 1472026371}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadNewScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11896,6 +11896,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7674f02b4ef961842b14ecd6026e6577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetScene:
+    m_AssetGUID: 4f67d09f3fc25b94cbdc2c003d306bd2
+    m_SubObjectName: 
+    m_SubObjectGUID: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
 --- !u!4 &1472026372
 Transform:
   m_ObjectHideFlags: 0
