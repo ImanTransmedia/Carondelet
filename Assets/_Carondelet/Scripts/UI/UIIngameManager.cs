@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIIngameManager : MonoBehaviour
 {
-
-     [SerializeField]
+    [SerializeField]
     private AccessibilityManager accessibilityManager;
     public GameObject interactionText;
 
@@ -75,7 +76,6 @@ public class UIIngameManager : MonoBehaviour
         interactionText.SetActive(false);
     }
 
-
     private GameObject currentModel;
 
     public void ShowItemPanel(string name, string subTitle, string description)
@@ -95,7 +95,7 @@ public class UIIngameManager : MonoBehaviour
 
     public void HideItemPanel()
     {
-         Debug.Log("panel 3D cerrado");
+        Debug.Log("panel 3D cerrado");
         if (fadeCoroutine != null)
         {
             StopCoroutine(fadeCoroutine);
@@ -123,10 +123,9 @@ public class UIIngameManager : MonoBehaviour
 
         // Posicion del modelo
         currentModel.transform.position =
-        modelRenderCamera.transform.position + modelPositionOffset;
+            modelRenderCamera.transform.position + modelPositionOffset;
 
         currentModel.layer = LayerMask.NameToLayer("UI Model");
-
 
         modelRenderCamera.cullingMask = modelRenderLayer;
     }
@@ -174,5 +173,23 @@ public class UIIngameManager : MonoBehaviour
 
         if (!activate)
             itemPanel.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.activeSceneChanged += OnSceneChanged;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= OnSceneChanged;
+    }
+
+    private void OnSceneChanged(Scene oldScene, Scene newScene)
+    {
+        if (modelRenderCamera != null)
+        {
+            modelRenderCamera.targetTexture = null;
+        }
     }
 }
