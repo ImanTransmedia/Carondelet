@@ -137,6 +137,27 @@ MonoBehaviour:
       nombre apellido 10'
     m_Metadata:
       m_Items: []
+  - m_Id: 1787492230782978
+    m_Localized: "W, A, S, D \xF1awpakunata, mouse uta juk joystick virtualkunata
+      apaykuy, palacioman kuyaykuy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782979
+    m_Localized: "\xD1ankuna riksiy "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782980
+    m_Localized: Rikchay  1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782981
+    m_Localized: Rikchay 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782982
+    m_Localized: Rikchay 3
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

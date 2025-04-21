@@ -137,6 +137,27 @@ MonoBehaviour:
       nombre apellido 10'
     m_Metadata:
       m_Items: []
+  - m_Id: 1787492230782978
+    m_Localized: Usa W, A, S, D y el mouse o los joysticks virtuales para moverte
+      por el palacio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782979
+    m_Localized: Progreso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782980
+    m_Localized: Objetivo 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782981
+    m_Localized: Objetivo 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782982
+    m_Localized: Objetivo 3
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -137,6 +137,27 @@ MonoBehaviour:
       nombre apellido 10'
     m_Metadata:
       m_Items: []
+  - m_Id: 1787492230782978
+    m_Localized: "Utilisez W, A, S, D et la souris ou les joysticks virtuels pour
+      vous d\xE9placer dans le palais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782979
+    m_Localized: Progression
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782980
+    m_Localized: Objectif 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782981
+    m_Localized: Objectif 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1787492230782982
+    m_Localized: Objectif 3
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
