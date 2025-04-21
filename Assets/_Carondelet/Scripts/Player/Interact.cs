@@ -65,7 +65,7 @@ public class Interact : MonoBehaviour
     public GameObject interactPrefab;
     private Transform currentTarget;
     private GameObject currentInstance;
-    public Vector3 offsetAbove = new Vector3(0f, 0.1f, 0f);
+    public Vector3 offsetAbove = new Vector3(0.1f, 0.1f, 0.3f);
 
     private void Update()
     {
